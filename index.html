@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Surprise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    
+    <style>
+        *{
+            font-family: "Poppins", serif;
+        }
+        body {
+            background: url('23308.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+       
+
+        .card {
+            width: 400px;
+            height: 250px;
+            background: pink;
+            display: flex;
+            color: #D70040;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            text-align: center;
+            transition: transform 0.5s;
+        }
+        .card:hover {
+            transform: scale(1.1);
+        }
+        .message {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: pink;
+            color :#d219a4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 20px;
+            animation: float 4s infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { transform: translateY(-200px); opacity: 0; }
+        }
+        .corner-image {
+            position: absolute;
+            width: 20vw;
+            height: 20vw;
+            max-width: 200px;
+            max-height: 200px;
+            perspective: 1000px;
+        }
+        .flip-card-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        .corner-image:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+        .flip-card-front {
+            background: white;
+        }
+        .flip-card-front img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .flip-card-back {
+            background: pink;
+            transform: rotateY(180deg);
+            text-align: center;
+            font-size: 18px;
+            color: red;
+        }
+        .top-left { top: 5%; left: 5%; }
+        .top-right { top: 5%; right: 5%; }
+        .bottom-left { bottom: 5%; left: 5%; }
+        .bottom-right { bottom: 5%; right: 5%; }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="pehlanasha.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="card" id="card" onclick="showMessage()">Click if You are the best girl of the UNIVERSE 💖</div>
+    <div class="message" id="messageBox">
+        <h2>Happy Valentine's Day Punu ! 💕</h2>
+        <p></p>Sorry Punu,
+        Mere paas koi physical gift toh nahi hai jo tum tak bhej sakun, lekin dil se ek cheez kehna chahta hoon—tum meri duniya ho jaan. Shayad mai tumhare liye bohot kuch nahi kar paya hoon ab tak, par ek baat zarur jaan lo—tum mere liye sabse special ho. Tumse pehle zindagi bas ek safar tha, par tum aayi aur sab kuch ek kahani jaisa ban gaya. Tum meri duniya ho, mera sukoon ho, meri jaan ho.
+        
+        Punu, tumse bina mile hi itni mohabbat ho gayi ki jaise hum janmo janmo se ek saath hai. Tum meri "Pehla Nasha" ho, ek aisi feeling jo kabhi purani nahi ho sakti. Tum meri zindagi ka woh hissa ho jo kabhi kisi aur se pura nahi ho sakta. Kabhi agar maine tumhe hurt kiya ho ya tumhe udaas kiya ho, toh mujhe maaf kar dena jaan. Main chahta hoon ki tum humesha muskurao, kyunki tumhari hasi meri duniya ka sabse khoobsurat nazara hai.
+        
+        Shayad main duniya ka best boyfriend na ho, lekin ek baat ki guarantee de sakta hoon—tumhari care mujhse zyada koi nahi kar sakta. Tum meri jaan ho, aur main tumse hamesha pyaar karta rahunga.
+        
+        I LOVE YOUUUUUUUUUU 3000000 * infinity * infinity times, Punu!
+        From Yours Lovinglyyy Omu ❤️
+        
+        </p>
+    </div>
+    <div class="corner-image top-left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="punu1.jpg" alt="Poonam">
+            </div>
+            <div class="flip-card-back">The cutest of all my jaan❤️ </div>
+        </div>
+    </div>
+    <div class="corner-image top-right">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="punu2.jpg" alt="Poonam">
+            </div>
+            <div class="flip-card-back">My jaan slaying at her freshers looking most beautiful PRINCESS  ❤️</div>
+        </div>
+    </div>
+    <div class="corner-image bottom-left">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="punu3.jpg" alt="Poonam">
+            </div>
+            <div class="flip-card-back">The girl who doesnt require any make upp .Naturalll Beautyyy💖</div>
+        </div>
+    </div>
+    <div class="corner-image bottom-right">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="punu4.jpg" alt="Poonam">
+            </div>
+            <div class="flip-card-back">Dekho toh meri kuchupuchu ko black kurti mein shining star jaisi 💕</div>
+        </div>
+    </div>
+    <script>
+        function showMessage() {
+            document.getElementById("messageBox").style.display = "block";
+            document.getElementById("card").style.display = "none";
+        }
+        function createHearts() {
+            for (let i = 0; i < 20; i++) {
+                let heart = document.createElement("div");
+                heart.innerHTML = "❤️";
+                heart.classList.add("heart");
+                heart.style.left = Math.random() * window.innerWidth + "px";
+                heart.style.top = Math.random() * window.innerHeight + "px";
+                heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 4000);
+            }
+        }
+        setInterval(createHearts, 1000);
+    </script>
+</body>
+</html>
